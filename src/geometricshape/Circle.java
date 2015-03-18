@@ -29,11 +29,25 @@ public class Circle {
 	public void setR(double r) {
 		this.r = r;
 	}
+	
 	public Circle(double xC, double yC, double r) {
 		this.xC = xC;
 		this.yC = yC;
-		this.r = r;
+		if(r>0){
+		
+			this.r = r;
+		
+		}
+		else{
+			
+			throw new IllegalArgumentException("Il raggio deve essere maggiore di 0");
+			
+		}
+		
+		
+		
 	}
+	
 	public double getXMin(){
 		return this.xC-this.r;
 		
@@ -53,8 +67,11 @@ public class Circle {
 		
 	}
 	
-	public boolean contains(){
+	public boolean contains(Circle x){
 		boolean s=false;
-		
+		if(this.getXMin()<=x.getXMin() && this.getYMin()<=x.getYMin() && this.getXMax()>=x.getXMax() && this.getYMax()>=x.getYMax()){
+			s=true;			
+		}
+		return s;
 	}
 }
