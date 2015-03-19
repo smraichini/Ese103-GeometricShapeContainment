@@ -1,23 +1,33 @@
-package geometricshape;
+
+
+
+
+
+package geometricshapes;
 
 public class Triangle {
-	private double xC;
-	private double yC;
+	@Override
+	public String toString() {
+		return "Triangle [xV=" + xV + ", yV=" + yV + ", l=" + l + "]";
+	}
+
+	private double xV;
+	private double yV;
 	private double l;
-	public double getxC() {
-		return xC;
+	public double getXV() {
+		return xV;
 	}
 	
-	public void setxC(double xC) {
-		this.xC = xC;
+	public void setXV(double xV) {
+		this.xV = xV;
 	}
 	
-	public double getyC() {
-		return yC;
+	public double getYV() {
+		return yV;
 	}
 	
-	public void setyC(double yC) {
-		this.yC = yC;
+	public void setYV(double yV) {
+		this.yV = yV;
 	}
 	
 	public double getL() {
@@ -25,12 +35,17 @@ public class Triangle {
 	}
 	
 	public void setL(double l) {
-		this.l = l;
+		if(l>0){
+			this.l = l;
+			}
+			else{
+				throw new IllegalArgumentException("Il lato deve essere maggiore di 0");
+			}
 	}
 	
-	public Triangle(double xC, double yC, double l) {
-		this.xC = xC;
-		this.yC = yC;
+	public Triangle(double xV, double yV, double l) {
+		this.xV = xV;
+		this.yV = yV;
 		if(l>0){
 		this.l = l;
 		}
@@ -40,21 +55,21 @@ public class Triangle {
 	}
 	
 	public double getXMin(){
-		return this.xC;
+		return this.xV;
 		
 	}
 	public double getYMin(){
-		return this.yC;
+		return this.yV;
 		
 	}
 	
 	public double getXMax(){
-		return this.xC+this.l;
+		return this.xV+this.l;
 		
 	}
 	
 	public double getYMax(){
-		return this.yC+l*Math.sqrt(3)/2;
+		return this.yV+l*Math.sqrt(3)/2;
 		
 	}
 	

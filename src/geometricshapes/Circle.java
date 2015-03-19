@@ -1,24 +1,29 @@
-package geometricshape;
+package geometricshapes;
 
 public class Circle {
+	@Override
+	public String toString() {
+		return "Circle [xC=" + xC + ", yC=" + yC + ", r=" + r + "]";
+	}
+
 	private double xC;
 	private double yC;
 	private double r;
 	
 	
-	public double getxC() {
+	public double getXC() {
 		return xC;
 	}
 	
-	public void setxC(double xC) {
+	public void setXC(double xC) {
 		this.xC = xC;
 	}
 	
-	public double getyC() {
+	public double getYC() {
 		return yC;
 	}
 	
-	public void setyC(double yC) {
+	public void setYC(double yC) {
 		this.yC = yC;
 	}
 	
@@ -27,7 +32,16 @@ public class Circle {
 	}
 	
 	public void setR(double r) {
-		this.r = r;
+		if(r>0){
+			
+			this.r = r;
+		
+		}
+		else{
+			
+			throw new IllegalArgumentException("Il raggio deve essere maggiore di 0");
+			
+		}
 	}
 	
 	public Circle(double xC, double yC, double r) {
@@ -85,3 +99,4 @@ public class Circle {
 	
 	
 }
+
