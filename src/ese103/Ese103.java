@@ -1,5 +1,5 @@
 package ese103;
-import geometricshape.*;
+import geometricshapes.*;
 public class Ese103 {
 
 	public static void main(String[] args) {
