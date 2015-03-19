@@ -75,13 +75,6 @@ public class Circle {
 		return s;
 	}
 	
-	public boolean contains(Triangle y){
-		boolean s=false;
-		if(this.getXMin()<=y.getXMin() && this.getYMin()<=y.getYMin() && this.getXMax()>=y.getXMax() && this.getYMax()>=y.getYMax()){
-			s=true;			
-		}
-		return s;
-	}
 	
 	
 }
