@@ -88,31 +88,31 @@ public class Pentagon extends GeometricShape {
 		return this.xV+this.l;
 	}
 	public double getYB() {
-		return yV;
+		return this.yV;
 	}
 	
 	
 	public double getXC() {
-		return (this.getXB()-this.getXA())*(Math.sqrt(5)-1)+this.getXB();
+		return ((this.getXB()-this.getXA())*(Math.sqrt(5)-1)/4)+((this.getYB()-this.getYA())*(Math.sqrt(Math.sqrt(5)/8+(5/8))))+this.getXB();
 	}
 	public double getYC() {
-		return (this.getXB()-this.getXA()*(Math.sqrt(5)/8+5/8))+this.getYB();
+		return -((this.getXB()-this.getXA())*(Math.sqrt(Math.sqrt(5)/8+5/8))) + ((this.getYB()-this.getYA())*(Math.sqrt(5)-1)/4) + this.getYB();
 	}
 	
 	
 	public double getXD() {
-		return (this.getXC()-this.getXB())*(Math.sqrt(5)-1)+this.getXC();
+		return ((this.getXC()-this.getXB())*(Math.sqrt(5)-1)/4)+((this.getYC()-this.getYB())*(Math.sqrt(Math.sqrt(5)/8+(5/8))))+this.getXC();
 	}
 	public double getYD() {
-		return (this.getXC()-this.getXB()*(Math.sqrt(5)/8+5/8))+this.getYC();
+		return -((this.getXC()-this.getXB())*(Math.sqrt(Math.sqrt(5)/8+5/8))) + ((this.getYC()-this.getYB())*(Math.sqrt(5)-1)/4) + this.getYC();
 	}
 	
 	
 	public double getXE() {
-		return (this.getXD()-this.getXC())*(Math.sqrt(5)-1)+this.getXD();
+		return ((this.getXD()-this.getXC())*(Math.sqrt(5)-1)/4)+((this.getYD()-this.getYC())*(Math.sqrt(Math.sqrt(5)/8+(5/8))))+this.getXD();
 	}
 	public double getyE() {
-		return (this.getXD()-this.getXC()*(Math.sqrt(5)/8+5/8))+this.getYD();
+		return -((this.getXD()-this.getXC())*(Math.sqrt(Math.sqrt(5)/8+5/8))) + ((this.getYD()-this.getYC())*(Math.sqrt(5)-1)/4) + this.getYD();
 	}
 	
 	//stampa del pentagono

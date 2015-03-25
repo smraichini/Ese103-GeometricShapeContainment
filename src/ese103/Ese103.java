@@ -13,7 +13,7 @@ public class Ese103 {
 			shapeArray[4] = new Triangle(-2, -2, 4);
 			shapeArray[5] = new Rectangle(-2, -2, 4, 3);
 			shapeArray[6] = new Square(-2, -2, 4);
-			shapeArray[7] = new Pentagon(-4, 0, 100);
+			shapeArray[7] = new Pentagon(-4, -4, 100);
 			GeometricShape a, b;
 			for(int i=0; i<shapeArray.length; i++) {
 				a = shapeArray[i];
