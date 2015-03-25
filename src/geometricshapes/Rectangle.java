@@ -23,27 +23,27 @@ public class Rectangle extends GeometricShape {
 		}
 	}
 
-	public double getxV() {
+	public double getXV() {
 		return xV;
 	}
 
-	public void setxV(double xV) {
+	public void setXV(double xV) {
 		this.xV = xV;
 	}
 
-	public double getyV() {
+	public double getYV() {
 		return yV;
 	}
 
-	public void setyV(double yV) {
+	public void setYV(double yV) {
 		this.yV = yV;
 	}
 
-	public double getxSideLength() {
+	public double getXSideLength() {
 		return xSideLength;
 	}
 
-	public void setxSideLength(double xSideLength) {
+	public void setXSideLength(double xSideLength) {
 		if(xSideLength>0){
 			
 			this.xSideLength = xSideLength;
@@ -55,11 +55,11 @@ public class Rectangle extends GeometricShape {
 		}
 	}
 
-	public double getySideLength() {
+	public double getYSideLength() {
 		return ySideLength;
 	}
 
-	public void setySideLength(double ySideLength) {
+	public void setYSideLength(double ySideLength) {
 		if(ySideLength>0){
 		
 			this.ySideLength = ySideLength;

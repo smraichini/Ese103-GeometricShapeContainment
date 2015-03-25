@@ -11,7 +11,7 @@ public abstract class GeometricShape {
 	
 	public boolean contains(GeometricShape z) {
 		boolean r=false;
-		if((this.getXMin() <= z.getXMin()) &&
+		if((this.getXMin() <= z.getXMin())  &&
             (this.getYMin() <= z.getYMin()) &&
 			(z.getXMax() <= this.getXMax()) &&
 			(z.getYMax() <= this.getYMax()))
