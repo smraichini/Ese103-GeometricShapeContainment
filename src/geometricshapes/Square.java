@@ -4,8 +4,8 @@ public class Square extends Rectangle {
 	
 	public void setL(double l){
 		if (l>0){
-			this.setXSideLength(l);
-			this.setYSideLength(l);
+			this.xSideLength=l;
+			this.ySideLength=l;
 		}
 		else
 		{
@@ -14,7 +14,7 @@ public class Square extends Rectangle {
 	}
 	
 	public double getL(){
-		return this.getXSideLength();
+		return this.xSideLength;
 	}
 
 	public Square(double xV, double yV, double l) {
@@ -23,11 +23,38 @@ public class Square extends Rectangle {
 	
 	}
 
+	
+	
 	@Override
 	public String toString() {
-		return "Square [L=" + getL() + ", xV=" + getXV()
-				+ ", yV=" + getYV() + "]";
+		return "Square [xV=" + xV + ", yV=" + yV + ", l=" + getL() + "]";
+	}
+
+	@Override
+	public void setXSideLength(double l) {
+		if(xSideLength>0){
+			
+			this.xSideLength = l;
+			this.ySideLength = l;
+			
+		}
+		else{
+		
+			throw new IllegalArgumentException("Il lato deve essere maggiore di 0");
+		}
 	}
 	
-	
+	@Override
+	public void setYSideLength(double l) {
+		if(ySideLength>0){
+			
+			this.xSideLength = l;
+			this.ySideLength = l;
+			
+		}
+		else{
+		
+			throw new IllegalArgumentException("Il lato deve essere maggiore di 0");
+		}
+	}
 }
