@@ -29,5 +29,31 @@ public class Square extends Rectangle {
 				+ ", yV=" + getYV() + "]";
 	}
 	
+	@Override
+	public void setXSideLength(double l) {
+		if(l>0){
+			
+			this.setXSideLength(l);
+			this.setYSideLength(l);
+			
+		}
+		else{
+		
+			throw new IllegalArgumentException("Il lato deve essere maggiore di 0");
+		}
+	}
 	
+	@Override
+	public void setYSideLength(double l) {
+		if(l>0){
+			
+			this.setXSideLength(l);
+			this.setYSideLength(l);
+			
+		}
+		else{
+		
+			throw new IllegalArgumentException("Il lato deve essere maggiore di 0");
+		}
+	}
 }
