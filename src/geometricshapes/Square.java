@@ -32,7 +32,7 @@ public class Square extends Rectangle {
 
 	@Override
 	public void setXSideLength(double l) {
-		if(xSideLength>0){
+		if(l>0){
 			
 			this.xSideLength = l;
 			this.ySideLength = l;
@@ -46,7 +46,7 @@ public class Square extends Rectangle {
 	
 	@Override
 	public void setYSideLength(double l) {
-		if(ySideLength>0){
+		if(l>0){
 			
 			this.xSideLength = l;
 			this.ySideLength = l;
